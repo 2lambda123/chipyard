@@ -49,7 +49,7 @@ Prerequisites
 * OpenROAD flow tools (NOTE: tutorial may break with different tool versions):
 
   * **Yosys 0.27+3** (synthesis), install `using conda <https://anaconda.org/litex-hub/yosys>`__ or `from source <https://yosyshq.net/yosys/download.html>`__
-  * **OpenROAD v2.0-7070-g0264023b6** (place-and-route), install `using conda <https://anaconda.org/litex-hub/openroad>`__ (note that GUI is disabled in conda package) or 
+  * **OpenROAD v2.0-7070-g0264023b6** (place-and-route), install `using conda <https://anaconda.org/litex-hub/openroad>`__ (note that GUI is disabled in conda package) or
     `from source <https://github.com/The-OpenROAD-Project/OpenROAD/blob/master/docs/user/Build.md>`__ (git hash: 0264023b6c2a8ae803b8d440478d657387277d93)
   * **KLayout 0.28.5** (DEF to GDSII conversion, DRC), install `using conda <https://anaconda.org/litex-hub/klayout>`__ or `from source <https://www.klayout.de/build.html>`__
   * **Magic 8.3.376** (DRC), install `using conda <https://anaconda.org/litex-hub/magic>`__ or `from source <http://www.opencircuitdesign.com/magic/install.html>`__
@@ -275,7 +275,7 @@ This is because Magic and Netgen, as of the writing of this tutorial, do not hav
 so to view the DRC/LVS results for debugging you must launch the tool interactively, then run DRC/LVS checks,
 which is done by the ``generated-scripts/view_[drc|lvs]`` scripts. This is not the case for KLayout, which does have a loadable database format.
 
-Below is the window you should see when loading the KLayout DRC results interactively. Note that most of these DRC errors are 
+Below is the window you should see when loading the KLayout DRC results interactively. Note that most of these DRC errors are
 from special rules relating to Sky130 SRAMs, which have been verified separately. In the future the KLayout tool plugin should blackbox these
 SRAM macros by default, but this feature does not exist yet.
 
