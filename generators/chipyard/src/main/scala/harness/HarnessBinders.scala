@@ -286,4 +286,3 @@ class WithResetFromHarness extends HarnessBinder({
     port.io := th.referenceReset.asAsyncReset
   }
 })
-
