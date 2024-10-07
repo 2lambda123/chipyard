@@ -79,7 +79,7 @@ class WithPLLSelectorDividerClockGenerator extends OverrideLazyIOBinder({
     }
   }
 })
- 
+
 // This passes all clocks through to the TestHarness
 class WithPassthroughClockGenerator extends OverrideLazyIOBinder({
   (system: HasChipyardPRCI) => {

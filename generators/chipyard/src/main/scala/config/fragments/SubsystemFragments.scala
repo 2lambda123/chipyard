@@ -26,4 +26,4 @@ class WithInclusiveCacheInteriorBuffer(buffer: InclusiveCachePortParameters = In
 // Adds buffers on the exterior of the inclusive LLC, to improve PD
 class WithInclusiveCacheExteriorBuffer(buffer: InclusiveCachePortParameters = InclusiveCachePortParameters.full) extends Config((site, here, up) => {
   case InclusiveCacheKey => up(InclusiveCacheKey).copy(bufInnerExterior=buffer, bufOuterExterior=buffer)
-})                                                                                                                                                                                                                 
+})

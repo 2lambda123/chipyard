@@ -42,4 +42,3 @@ ifeq ($(tutorial),sky130-openroad)
     # Yosys compatibility for CIRCT-generated Verilog, at the expense of elaboration time.
     ENABLE_YOSYS_FLOW  = 1
 endif
-

@@ -108,10 +108,10 @@ class WithTilePrefetchers extends Config((site, here, up) => {
 
 // Adds boundary buffers to RocketTiles, which places buffers between the caches and the TileLink interface
 // This typically makes it easier to close timing
-class WithRocketBoundaryBuffers(buffers: Option[RocketTileBoundaryBufferParams] = Some(RocketTileBoundaryBufferParams(true))) extends Config((site, here, up) => {                                                                                                                                                           
-  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem)) map {                                                                                                                                                                                                                                                      
-    case tp: RocketTileAttachParams => tp.copy(tileParams=tp.tileParams.copy(                                                                                                                                                                                                                                                
-      boundaryBuffers=buffers                                                                                                                                                                                                                                                                                                
-    ))                                                                                                                                                                                                                                                                                                                       
-  }                                                                                                                                                                                                                                                                                                                          
-})   
+class WithRocketBoundaryBuffers(buffers: Option[RocketTileBoundaryBufferParams] = Some(RocketTileBoundaryBufferParams(true))) extends Config((site, here, up) => {
+  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem)) map {
+    case tp: RocketTileAttachParams => tp.copy(tileParams=tp.tileParams.copy(
+      boundaryBuffers=buffers
+    ))
+  }
+})

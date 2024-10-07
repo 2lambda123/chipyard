@@ -79,7 +79,7 @@ class NexysVideoHarness(override implicit val p: Parameters) extends NexysVideoS
     def referenceReset = dutClock.in.head._1.reset
     def success = { require(false, "Unused"); false.B }
 
-    if (p(NexysVideoShellDDR)) { 
+    if (p(NexysVideoShellDDR)) {
       ddrOverlay.get.mig.module.clock := harnessBinderClock
       ddrOverlay.get.mig.module.reset := harnessBinderReset
       ddrBlockDuringReset.get.module.clock := harnessBinderClock
